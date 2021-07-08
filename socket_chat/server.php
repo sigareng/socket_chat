@@ -53,9 +53,10 @@ while (true) {
 			$user_message = $tst_msg['message']; //message text
 			$user_color = $tst_msg['color']; //color
 			$user_ava = $tst_msg['ava']; //color
+			$idname = $tst_msg['idname']; //idname
 
 			//prepare data to be sent to client
-			$response_text = mask(json_encode(array('type'=>'usermsg', 'name'=>$user_name, 'message'=>$user_message, 'ip'=>$ip,'ava'=>$user_ava,'color'=>$user_color)));
+			$response_text = mask(json_encode(array('type'=>'usermsg', 'name'=>$user_name, 'message'=>$user_message, 'ip'=>$ip,'ava'=>$user_ava,'color'=>$user_color,'idname'=>$idname)));
 			send_message($response_text); //send data
 			break 2; //exist this loop
 		}
